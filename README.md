@@ -18,18 +18,21 @@ A Java-based in-memory movie content management system featuring a multi-level c
 ## 📂 Project Structure
 
 ```text
+```text
 src/
-└── main/java/
-    └── org,exanple/
-        ├── Main.java                        # Driver class with demo operations
-        ├── cache/
-        │   ├── LFUCache.java                # O(1) LFU Cache implementation
-        │   └── LRUCache.java                # LRU Cache implementation
-        ├── exception/
-        │   ├── DuplicateEntryException.java # Exception for duplicate IDs
-        │   └── InvalidInputException.java   # Exception for bad queries
-        ├── model/
-        │   ├── Movie.java                   # Movie data model
-        │   └── User.java                    # User data model
-        └── service/
-            └── ZipReelSystem.java           # Core orchestration and search logic
+├── main/java/com/example/
+│   ├── Main.java                        # Driver class (STDIN command processing)
+│   ├── cache/
+│   │   ├── LFUCache.java                # O(1) LFU Cache implementation
+│   │   └── LRUCache.java                # LRU Cache implementation
+│   ├── exception/
+│   │   ├── DuplicateEntryException.java # Exception for duplicate IDs
+│   │   └── InvalidInputException.java   # Exception for bad queries
+│   ├── model/
+│   │   ├── Movie.java                   # Movie data model
+│   │   └── User.java                    # User data model
+│   └── service/
+│       └── ZipReelSystem.java           # Core orchestration and search logic
+└── test/java/com/zipreel/
+    └── service/
+        └── ZipReelSystemTest.java       # Unit tests for critical components

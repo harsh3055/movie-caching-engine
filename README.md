@@ -1,4 +1,4 @@
-# ZipReel - Movie Content Management System
+# movie-caching-engine
 
 A Java-based in-memory movie content management system featuring a multi-level caching mechanism to optimize search operations and provide fast retrieval times.
 
@@ -19,8 +19,8 @@ A Java-based in-memory movie content management system featuring a multi-level c
 
 ```text
 src/
-└── com/
-    └── zipreel/
+└── main/java/
+    └── org,exanple/
         ├── Main.java                        # Driver class with demo operations
         ├── cache/
         │   ├── LFUCache.java                # O(1) LFU Cache implementation

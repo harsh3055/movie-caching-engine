@@ -18,7 +18,7 @@ A Java-based in-memory movie content management system featuring a multi-level c
 ## 📂 Project Structure
 
 ```text
-```text
+
 src/
 ├── main/java/com/example/
 │   ├── Main.java                        # Driver class (STDIN command processing)
@@ -35,4 +35,39 @@ src/
 │       └── ZipReelSystem.java           # Core orchestration and search logic
 └── test/java/com/zipreel/
     └── service/
-        └── ZipReelSystemTest.java       # Unit tests for critical components
+    └── ZipReelSystemTest.java       # Unit tests for critical components
+
+```
+
+## 💻 Terminal Commands
+
+Once the application is running, you can interact with it using the following commands:
+
+| Command | Format | Example |
+| :--- | :--- | :--- |
+| **Add Movie** | `ADD_MOVIE <id> <title> <genre> <year> <rating>` | `ADD_MOVIE 1 "Inception" "Sci-Fi" 2010 9.5` |
+| **Add User** | `ADD_USER <id> <name> <preferred_genre>` | `ADD_USER 1 "John" "Action"` |
+| **Search** | `SEARCH <user_id> <search_type> <search_value>` | `SEARCH 1 GENRE "Action"` |
+| **Multi-Search** | `SEARCH_MULTI <user_id> <genre> <year> <min_rating>` | `SEARCH_MULTI 1 "Action" 2020 8.0` |
+| **View Stats** | `VIEW_CACHE_STATS` | `VIEW_CACHE_STATS` |
+| **Clear Cache** | `CLEAR_CACHE <cache_level>` (L1 or L2) | `CLEAR_CACHE L1` |
+
+## 🧪 Testing
+
+The project includes unit tests located in `src/test/java/com.example/SystemTest.java`. 
+
+### How to Run Tests
+1. Ensure your `pom.xml` includes the JUnit 5 dependency.
+2. In IntelliJ, navigate to the test file.
+3. Click the green play button (▶️) next to the class name or individual test methods to execute them.
+
+### Key Test Cases Implemented:
+* `testSuccessfulAddition`: Verifies correct registration of movies and users.
+* `testDuplicateMovieThrowsException`: Ensures the system handles duplicate IDs.
+* `testSearchWithInvalidUserThrowsException`: Validates that searches for non-existent users trigger `InvalidInputException`.
+
+## 🏃 How to Run
+
+1. **Compile:** `mvn clean compile`
+2. **Run:** `mvn exec:java -Dexec.mainClass="com.example.Main"`
+3. **Interact:** Type the commands listed above directly into your terminal.

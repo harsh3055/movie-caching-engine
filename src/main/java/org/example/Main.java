@@ -13,7 +13,7 @@ public class Main {
         ZipReelSystem system = new ZipReelSystem();
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("ZipReel System Started. Awaiting commands (Type EXIT to quit)...");
+        System.out.println("System Started. Awaiting commands (Type EXIT to quit)...");
 
         // Read from STDIN continuously
         while (scanner.hasNextLine()) {

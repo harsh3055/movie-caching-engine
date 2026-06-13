@@ -1,0 +1,18 @@
+# IntelliJ / IDE specific files
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Maven / Build files
+target/
+build/
+bin/
+*.class
+*.jar
+*.war
+*.ear
+
+# OS specific files
+.DS_Store
+Thumbs.db
